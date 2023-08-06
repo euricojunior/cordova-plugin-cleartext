@@ -17,8 +17,6 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CordovaPluginsCleartext.java" target-dir="src/cordova/plugins/cleartext" />
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
+        <custom-preference name="android-manifest/application/@android:usesCleartextTraffic" value="true"/>
     </platform>
 </plugin>
